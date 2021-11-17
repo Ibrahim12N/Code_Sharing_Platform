@@ -1,4 +1,4 @@
-package platform.Service;
+package platform.service;
 
 import platform.entity.CodeSnippet;
 

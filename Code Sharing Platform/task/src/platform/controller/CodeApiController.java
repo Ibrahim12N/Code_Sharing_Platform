@@ -2,7 +2,7 @@ package platform.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import platform.Service.CodeService;
+import platform.service.CodeService;
 import platform.entity.CodeSnippet;
 
 import java.util.List;
