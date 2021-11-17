@@ -1,0 +1,12 @@
+.date {
+    color: green;
+    margin-bottom: 0;
+}
+
+.code {
+    display: inline-block;
+    background-color: gainsboro;
+    border: 1px solid black;
+    padding: 5px;
+    margin-top: 0;
+}

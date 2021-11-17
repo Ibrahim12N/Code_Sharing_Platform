@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Code</title>
+    <style>
+        .time {
+            color: teal;
+            margin-bottom: 0;
+            border: 10px dot-dash #0a280a;
+        }
+
+        .code {
+            display: inline-block;
+            background-color: gainsboro;
+            border: 1px solid black;
+            padding: 5px;
+            margin-top: 0;
+        }
+        }
+    </style>
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body>
+
+Date: <span id="load_date" class="time" th:text="${theCode.date}"></span>
+<br>
+<pre id="code_snippet" class="code"> <code th:text="${theCode.code}"></code></pre>
+<br>
+<p>
+<span th:if="${theCode.isTimeRestricted() == true}">
+    The code will be available for <span id="time_restriction" th:text="${theCode.time}"></span> seconds
+    </span>
+<br>
+</p>
+<p>
+<span th:if="${theCode.isViewRestricted() == true}">
+            <span id="views_restriction" th:text="${theCode.views}"></span> more views allowed
+    </span>
+</p>
+<br>
+
+
+</body>
+</html>

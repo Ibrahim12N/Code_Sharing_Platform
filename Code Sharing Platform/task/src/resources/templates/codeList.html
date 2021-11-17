@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<head th:fragment="headerfragment">
+
+    <meta charset="utf-8"/>
+    <title>Latest</title>
+    <style>
+        .time {
+            color: teal;
+            margin-bottom: 0;
+            border: 10px dot-dash #0a280a;
+        }
+
+        .code {
+            display: inline-block;
+            background-color: green;
+            border: 1px solid black;
+            padding: 10px;
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+<tbody>
+<tr th:each="code : ${latestCodes}">
+    <span  id="time-id" class="time" th:text="${code.date}" ></span>
+    <br>
+    <pre  id="code-id" class="code" th:text="${code.code}" ></pre>
+    <br>
+    <p   class="time" th:text="${code.time}" ></p>
+    <br>
+    <p   class="time" th:text="${code.views}" ></p>
+    <br>
+
+
+</tr>
+</tbody>
+</body>
+</html>
